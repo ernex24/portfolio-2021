@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css">
+    <title>Ernesto Pérez portfolio</title>
+</head>
+
+<body>
+
+    <div
+    class="animsition-overlay"
+    data-animsition-overlay="true"
+    data-animsition-in-class="overlay-slide-in-top"
+    data-animsition-in-duration="300"
+    data-animsition-out-class="overlay-slide-out-top"
+    data-animsition-out-duration="800"
+  ></div>
+
+    <div class="header">
+        <div class="logo"><a href="/index.html#about_me">ERNESTOPEREZ</a></div>
+        <ul class="social-media">
+            <li><a href="#"><img id="linkedin" src="/images/linkedin.svg"></img></a></li>
+            </li>
+            <li><a id="dribbble" href="#"><img src="/images/dribbble.svg"></img></a></li>
+            </li>
+            <li><a id="instagram" href="#"><img src="/images/instagram.svg"></img></a></li>
+            </li>
+        </ul>
+    </div>
+
+    <div id="scene" class="main-background"> 
+        <img data-depth="0.4" class="first-section-2" src="images/aro3.svg"></img>
+        <img  data-depth="0.8"class="first-section-3" src="images/aro2.svg"></img>
+        <img data-depth="1"  class="first-section-4" src="images/aro1.svg"></img>
+    </div>
+    
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="slide" id="slide1">
+                <div class="hero-text">
+                    <div class="hero-subtitle">Hi my name is</div>
+                    <div class="hero-title">Ernesto Pérez</div>
+                    <div class="hero-description">I am a UI UX designer and <br>front-end developer</div>
+                    <!-- <a href="page2.html">Prueba</a> -->
+                </div>
+                <div class="hero-image">
+                    <div class="first-section-image-1"></div>
+                </div>
+                <div class="counter">01</div>
+            </div>       
+        </div>
+   
+        <div class="section" id="section1">
+            <div class="slide" id="slide2">
+                <div class="hero-text">
+                    <div class="hero-subtitle2">Project</div>
+                    <div class="hero-title2">Ev Charger finder</div>
+                    <div class="hero-description2">Find a E charger near you<br>using geolocalization</div>
+                    <!-- <a href="page2.html">Prueba</a> -->
+                </div>
+                    <div class="hero-image">
+                        <div class="first-section-image-2"></div>
+                    </div>
+                
+                <div class="counter1">02</div>
+            </div>
+        </div>
+
+        <div class="section" id="section2">
+            <div class="slide" id="slide2">
+                <div class="hero-text">
+                    <div class="hero-subtitle3">Project</div>
+                    <div class="hero-title3">Design system</div>
+                    <div class="hero-description3">Spread design accross all development teams<br>with a design system</div>
+                    <!-- <a href="page2.html">Prueba</a> -->
+                </div>
+                    <div class="hero-image">
+                        <div class="first-section-image-3"></div>
+                    </div>
+                
+                <div class="counter2">03</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="scrolldown">
+    <img src="images/scrolldown.svg"></img>
+    </div>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.extensions.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" crossorigin="anonymous" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            anchors: ['about_me', 'project_1', 'project_2'],
+            css3: true,
+            navigation: true,
+	        navigationPosition: 'right',
+            onLeave: function(origin, destination, direction){
+
+                if(destination.index === 0){
+                var subtitle = document.getElementsByClassName("hero-subtitle")[0].style.transform = "translateX(0)";
+                var title = document.getElementsByClassName("hero-title")[0].style.transform = "translateX(0)";
+                var description = document.getElementsByClassName("hero-description")[0].style.transform = "translateX(0)"
+                var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(0)"
+                var counter = document.getElementsByClassName("counter")[0].style.transform = "translateY(0)";
+                }
+
+                if(origin.index === 0){
+                var subtitle = document.getElementsByClassName("hero-subtitle")[0].style.transform = "translateX(-120%)";
+                var title = document.getElementsByClassName("hero-title")[0].style.transform = "translateX(-120%)";
+                var description = document.getElementsByClassName("hero-description")[0].style.transform = "translateX(-120%)";
+                var counter = document.getElementsByClassName("counter")[0].style.transform = "translateY(200%)";
+                }
+
+                if(destination.index === 1){
+                var subtitle = document.getElementsByClassName("hero-subtitle2")[0].style.transform = "translateX(0)";
+                var title = document.getElementsByClassName("hero-title2")[0].style.transform = "translateX(0)";
+                var description = document.getElementsByClassName("hero-description2")[0].style.transform = "translateX(0)";
+                var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(300%)"
+                var counter1 = document.getElementsByClassName("counter1")[0].style.transform = "translateY(0)";
+          
+                }
+
+                if(origin.index === 1){
+                var subtitle = document.getElementsByClassName("hero-subtitle2")[0].style.transform = "translateX(-120%)";
+                var title = document.getElementsByClassName("hero-title2")[0].style.transform = "translateX(-120%)";
+                var description = document.getElementsByClassName("hero-description2")[0].style.transform = "translateX(-120%)";
+                var counter1 = document.getElementsByClassName("counter1")[0].style.transform = "translateY(200%)";
+                }
+
+                if(destination.index === 2){
+                var subtitle = document.getElementsByClassName("hero-subtitle3")[0].style.transform = "translateX(0)";
+                var title = document.getElementsByClassName("hero-title3")[0].style.transform = "translateX(0)";
+                var description = document.getElementsByClassName("hero-description3")[0].style.transform = "translateX(0)";
+                var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(300%)"
+                var counter2 = document.getElementsByClassName("counter2")[0].style.transform = "translateY(0)";
+                }
+
+                if(origin.index === 2){
+                var subtitle = document.getElementsByClassName("hero-subtitle3")[0].style.transform = "translateX(-120%)";
+                var title = document.getElementsByClassName("hero-title3")[0].style.transform = "translateX(-120%)";
+                var description = document.getElementsByClassName("hero-description3")[0].style.transform = "translateX(-120%)";
+                var counter2 = document.getElementsByClassName("counter2")[0].style.transform = "translateY(200%)";
+                }
+               
+            },
+
+            afterSlideLoad: function(section, origin, destination, direction){
+                console.log(destination.index)
+                if(section.index === 0){
+                    var subtitle = document.getElementsByClassName("hero-subtitle")[0].style.transform = "translateX(0)";
+                    var title = document.getElementsByClassName("hero-title")[0].style.transform = "translateX(0)";
+                    var description = document.getElementsByClassName("hero-description")[0].style.transform = "translateX(0)";
+                    var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(0)"
+                    var counter = document.getElementsByClassName("counter")[0].style.transform = "translateY(0)";
+                }
+                
+            },
+
+
+        });
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+
+    </script>
+    <script>$(document).ready(function() {
+        $(".animsition-overlay").animsition({
+          inClass: 'overlay-slide-in-top',
+          outClass: 'overlay-slide-out-top',
+          inDuration: 1500,
+          outDuration: 800,
+          linkElement: '.animsition-link',
+          // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+          loading: true,
+          loadingParentElement: 'body', //animsition wrapper element
+          loadingClass: 'animsition-loading',
+          loadingInner: '', // e.g '<img src="loading.svg" />'
+          timeout: false,
+          timeoutCountdown: 5000,
+          onLoadEvent: true,
+          browser: [ 'animation-duration', '-webkit-animation-duration'],
+          // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+          // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+          overlay : true,
+          overlayClass : 'animsition-overlay-slide',
+          overlayParentElement : 'body',
+          transition: function(url){ window.location.href = url; }
+        });
+      });</script>
+</body>
+
+</html>
