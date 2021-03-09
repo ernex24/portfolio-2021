@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112460063-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112460063-1');
+        </script>
+
+
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css">
@@ -103,6 +115,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
     <script type="text/javascript">
+
+            window.onload = function(e){ 
+                console.log('load')
+                var subtitle = document.getElementsByClassName("hero-subtitle")[0].style.transform = "translateX(0)";
+                var title = document.getElementsByClassName("hero-title")[0].style.transform = "translateX(0)";
+                var description = document.getElementsByClassName("hero-description")[0].style.transform = "translateX(0)"
+                var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(0)"
+                var counter = document.getElementsByClassName("counter")[0].style.transform = "translateY(0)";
+            };
+
         var myFullpage = new fullpage('#fullpage', {
             anchors: ['about_me', 'project_1', 'project_2'],
             css3: true,
