@@ -12,19 +12,28 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-112460063-1');
         </script>
-
 
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css">
-    <title>Ernesto Pérez portfolio</title>
+    <title>Ernesto Pérez Portfolio</title>
 </head>
 
 <body>
+
+    <nav class="over-menu">
+        <ul class="over-menu-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#project_1">Work 1</a></li>
+            <li><a>Work 2</a></li>
+            <li><a>Work 3</a></li>
+            <li><a>About me</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </nav>
 
     <div
     class="animsition-overlay"
@@ -44,7 +53,17 @@
             </li>
             <li><a id="instagram" href="#"><img src="/images/instagram.svg"></img></a></li>
             </li>
+            <li>
+                <button class="menu" aria-label="Main Menu" >
+                    <svg width="100" height="100" viewBox="0 0 100 100">
+                      <path fill="#ffffff" class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                      <path class="line line2" d="M 20,50 H 80" />
+                      <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                  </button>
+            </li>
         </ul>
+       
     </div>
 
     <div id="scene" class="main-background"> 
@@ -59,7 +78,7 @@
                 <div class="hero-text">
                     <div class="hero-subtitle">Hi my name is</div>
                     <div class="hero-title">Ernesto Pérez</div>
-                    <div class="hero-description">I am a UI UX designer and <br>front-end developer</div>
+                    <div class="hero-description">I am a system minded product designer with UI UX, <br> visual design, development, and bussiness background.</div>
                     <!-- <a href="page2.html">Prueba</a> -->
                 </div>
                 <div class="hero-image">
@@ -107,121 +126,13 @@
     <img src="images/scrolldown.svg"></img>
     </div>
 
-    
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.extensions.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" crossorigin="anonymous" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
-    <script type="text/javascript">
-
-            window.onload = function(e){ 
-                console.log('load')
-                var subtitle = document.getElementsByClassName("hero-subtitle")[0].style.transform = "translateX(0)";
-                var title = document.getElementsByClassName("hero-title")[0].style.transform = "translateX(0)";
-                var description = document.getElementsByClassName("hero-description")[0].style.transform = "translateX(0)"
-                var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(0)"
-                var counter = document.getElementsByClassName("counter")[0].style.transform = "translateY(0)";
-            };
-
-        var myFullpage = new fullpage('#fullpage', {
-            anchors: ['about_me', 'project_1', 'project_2'],
-            css3: true,
-            navigation: true,
-	        navigationPosition: 'right',
-            onLeave: function(origin, destination, direction){
-
-                if(destination.index === 0){
-                var subtitle = document.getElementsByClassName("hero-subtitle")[0].style.transform = "translateX(0)";
-                var title = document.getElementsByClassName("hero-title")[0].style.transform = "translateX(0)";
-                var description = document.getElementsByClassName("hero-description")[0].style.transform = "translateX(0)"
-                var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(0)"
-                var counter = document.getElementsByClassName("counter")[0].style.transform = "translateY(0)";
-                }
-
-                if(origin.index === 0){
-                var subtitle = document.getElementsByClassName("hero-subtitle")[0].style.transform = "translateX(-120%)";
-                var title = document.getElementsByClassName("hero-title")[0].style.transform = "translateX(-120%)";
-                var description = document.getElementsByClassName("hero-description")[0].style.transform = "translateX(-120%)";
-                var counter = document.getElementsByClassName("counter")[0].style.transform = "translateY(200%)";
-                }
-
-                if(destination.index === 1){
-                var subtitle = document.getElementsByClassName("hero-subtitle2")[0].style.transform = "translateX(0)";
-                var title = document.getElementsByClassName("hero-title2")[0].style.transform = "translateX(0)";
-                var description = document.getElementsByClassName("hero-description2")[0].style.transform = "translateX(0)";
-                var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(300%)"
-                var counter1 = document.getElementsByClassName("counter1")[0].style.transform = "translateY(0)";
-          
-                }
-
-                if(origin.index === 1){
-                var subtitle = document.getElementsByClassName("hero-subtitle2")[0].style.transform = "translateX(-120%)";
-                var title = document.getElementsByClassName("hero-title2")[0].style.transform = "translateX(-120%)";
-                var description = document.getElementsByClassName("hero-description2")[0].style.transform = "translateX(-120%)";
-                var counter1 = document.getElementsByClassName("counter1")[0].style.transform = "translateY(200%)";
-                }
-
-                if(destination.index === 2){
-                var subtitle = document.getElementsByClassName("hero-subtitle3")[0].style.transform = "translateX(0)";
-                var title = document.getElementsByClassName("hero-title3")[0].style.transform = "translateX(0)";
-                var description = document.getElementsByClassName("hero-description3")[0].style.transform = "translateX(0)";
-                var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(300%)"
-                var counter2 = document.getElementsByClassName("counter2")[0].style.transform = "translateY(0)";
-                }
-
-                if(origin.index === 2){
-                var subtitle = document.getElementsByClassName("hero-subtitle3")[0].style.transform = "translateX(-120%)";
-                var title = document.getElementsByClassName("hero-title3")[0].style.transform = "translateX(-120%)";
-                var description = document.getElementsByClassName("hero-description3")[0].style.transform = "translateX(-120%)";
-                var counter2 = document.getElementsByClassName("counter2")[0].style.transform = "translateY(200%)";
-                }
-               
-            },
-
-            afterSlideLoad: function(section, origin, destination, direction){
-                console.log(destination.index)
-                if(section.index === 0){
-                    var subtitle = document.getElementsByClassName("hero-subtitle")[0].style.transform = "translateX(0)";
-                    var title = document.getElementsByClassName("hero-title")[0].style.transform = "translateX(0)";
-                    var description = document.getElementsByClassName("hero-description")[0].style.transform = "translateX(0)";
-                    var scrolldown = document.getElementsByClassName("scrolldown")[0].style.transform = "translateY(0)"
-                    var counter = document.getElementsByClassName("counter")[0].style.transform = "translateY(0)";
-                }
-                
-            },
-
-
-        });
-        var scene = document.getElementById('scene');
-        var parallaxInstance = new Parallax(scene);
-
-    </script>
-    <script>$(document).ready(function() {
-        $(".animsition-overlay").animsition({
-          inClass: 'overlay-slide-in-top',
-          outClass: 'overlay-slide-out-top',
-          inDuration: 1500,
-          outDuration: 800,
-          linkElement: '.animsition-link',
-          // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-          loading: true,
-          loadingParentElement: 'body', //animsition wrapper element
-          loadingClass: 'animsition-loading',
-          loadingInner: '', // e.g '<img src="loading.svg" />'
-          timeout: false,
-          timeoutCountdown: 5000,
-          onLoadEvent: true,
-          browser: [ 'animation-duration', '-webkit-animation-duration'],
-          // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-          // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-          overlay : true,
-          overlayClass : 'animsition-overlay-slide',
-          overlayParentElement : 'body',
-          transition: function(url){ window.location.href = url; }
-        });
-      });</script>
+    <script type="text/javascript" src="/js/functions.js" ></script>
 </body>
 
 </html>
